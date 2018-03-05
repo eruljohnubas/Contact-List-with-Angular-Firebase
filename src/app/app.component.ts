@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument} from 'angularfire2/firestore';
 import 'rxjs/add/operator/map';
 import { Observable } from '@firebase/util/dist/esm/src/subscribe';
+import { PartialObserver } from 'rxjs/Observer';
 
 interface Post {
 FirstName : string;
@@ -18,9 +19,9 @@ Address :string;
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
+posts :any;
   postsCol: AngularFirestoreCollection<Post>;
-  posts: Observable<Post[]>;
+  post: Observable<Post[]>;
 
   constructor(private afs: AngularFirestore){
 
@@ -28,7 +29,7 @@ export class AppComponent {
   }
 ngOnInit(){
   this.postsCol = this.afs.collection('posts');
-  this.posts= this.postsCol.valueChanges();
+  this.posts = this.postsCol.valueChanges();
 
 }
 }
