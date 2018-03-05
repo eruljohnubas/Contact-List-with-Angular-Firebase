@@ -3,17 +3,18 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import {AngularFireModule} from 'angularfire2';
-import {AngularFirestoreModule} from 'angularfire2/firestore';
-import {FormsModule} from '@angular/forms';
+
+import { AngularFireModule } from 'angularfire2';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { FormsModule } from '@angular/forms';
 
 var firebaseConfig = {
-  apiKey: "AIzaSyBbRBtapTtPv6MSZjB2PJnzawjnxzCXJXs",
-  authDomain: "firestore-309b7.firebaseapp.com",
-  databaseURL: "https://firestore-309b7.firebaseio.com",
-  projectId: "firestore-309b7",
-  storageBucket: "",
-  messagingSenderId: "8912526197"
+  apiKey: "AIzaSyC9-qh97lIneDYbqbA8XCn1-XT4rLDh3Mc",
+  authDomain: "contactlist-b3174.firebaseapp.com",
+  databaseURL: "https://contactlist-b3174.firebaseio.com",
+  projectId: "contactlist-b3174",
+  storageBucket: "contactlist-b3174.appspot.com",
+  messagingSenderId: "188726472244"
 };
 
 @NgModule({
@@ -22,7 +23,7 @@ var firebaseConfig = {
   ],
   imports: [
     BrowserModule,
-    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireModule.initializeApp(firebaseConfig), 
     AngularFirestoreModule,
     FormsModule
   ],
